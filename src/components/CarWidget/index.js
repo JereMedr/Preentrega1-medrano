@@ -5,9 +5,9 @@ import { BsFillCartFill } from 'react-icons/bs';
 
 function CartWidget() {
     return (
-        <a href="#" class="cart-widget">
+        <a href="#" className="cart-widget">
         <BsFillCartFill  />
-        <button class="btn btn-danger">4</button>
+        <button className="btn btn-danger">4</button>
       </a>
     );
 }
