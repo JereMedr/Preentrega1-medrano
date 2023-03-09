@@ -1,14 +1,21 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles.css";
 
-function Item({ modelo, marca, precio, id }) {
+function Item({ modelo, marca, anio,id, descripcion, imagen }) {
     console.log("estoy en Item");
+    let photo = imagen
     return (
-        <div>
-            <h1>{modelo}</h1>
+        <div className="card-container">
+            <img src={imagen} alt={modelo} className="card-img"></img>
+            <h1>{marca} {modelo}</h1>
+            <h2>{anio}</h2>
+            <Link to={`/detalle/${id}`}>
+                <button className="card-button">Ver más</button>
+            </Link>
         </div>
     );
 }
-
 
 export default Item;

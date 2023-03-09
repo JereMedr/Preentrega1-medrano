@@ -5,6 +5,7 @@
             "marca": "Ford",
             "modelo": "Fiesta",
             "anio": "2019",
+            "descripcion": "El nuevo Fiesta es un auto que se adapta a tu estilo de vida. Con un diseño moderno y elegante, el Fiesta es el auto ideal para moverte por la ciudad. Además, cuenta con un motor 1.6L de 120 CV y 150 Nm de torque, que te permitirá disfrutar de un excelente desempeño en la ciudad y en la ruta.",
             "imagen": "https://www.ford.com.ar/content/ford/ar/es_ar/home/posventa/mantenimiento-garantia/fiesta-picker/nuevo-fiesta/jcr:content/par/billboard_149308576/imageComponent/image.imgs.full.high.png"
         },
         {
@@ -12,6 +13,7 @@
             "marca": "Ford",
             "modelo": "Focus",
             "anio": "2019",
+            "descripcion": "El nuevo Focus es un auto que se adapta a tu estilo de vida. Con un diseño moderno y elegante, el Focus es el auto ideal para moverte por la ciudad. Además, cuenta con un motor 1.6L de 120 CV y 150 Nm de torque, que te permitirá disfrutar de un excelente desempeño en la ciudad y en la ruta.",
             "imagen": "https://www.ford.com.ar/content/dam/Ford/website-assets/latam/ar/ford-credit/nuevo-focus-tasa-especial/Ford-Credit-nuevo-focus_1440x628.jpg/jcr:content/renditions/small.jpg"
         },
         {
@@ -19,6 +21,7 @@
             "marca": "Chevrolet",
             "modelo": "Onix",
             "anio": "2019",
+            "descripcion": "El nuevo Onix es un auto que se adapta a tu estilo de vida. Con un diseño moderno y elegante, el Onix es el auto ideal para moverte por la ciudad. Además, cuenta con un motor 1.6L de 120 CV y 150 Nm de torque, que te permitirá disfrutar de un excelente desempeño en la ciudad y en la ruta.",
             "imagen": "https://www.chevrolet.com.ar/content/dam/chevrolet/mercosur/argentina/espanol/index/cars/2020-onix-premier/colorizer/01-images/julio-20/3-onix-premier-red-e-or-notredmet-5.png?imwidth=960"
         },
         {
@@ -26,6 +29,7 @@
             "marca": "Chevrolet",
             "modelo": "Cruze",
             "anio": "2019",
+            "descripcion": "El nuevo Cruze es un auto que se adapta a tu estilo de vida. Con un diseño moderno y elegante, el Cruze es el auto ideal para moverte por la ciudad. Además, cuenta con un motor 1.6L de 120 CV y 150 Nm de torque, que te permitirá disfrutar de un excelente desempeño en la ciudad y en la ruta.",
             "imagen": "https://www.chevrolet.com.ar/content/dam/chevrolet/mercosur/argentina/espanol/index/cars/2019-cruze-premier/colorizer/enero-21/colorizer-prata-switchblade.jpg?imwidth=960"
         },
         {
@@ -33,6 +37,7 @@
             "marca": "Peugeot",
             "modelo": "208",
             "anio": "2019",
+            "descripcion": "El nuevo 208 es un auto que se adapta a tu estilo de vida. Con un diseño moderno y elegante, el 208 es el auto ideal para moverte por la ciudad. Además, cuenta con un motor 1.6L de 120 CV y 150 Nm de torque, que te permitirá disfrutar de un excelente desempeño en la ciudad y en la ruta.",
             "imagen": "https://cdn.asofix.com/companies/11c43970-a912-11eb-8eee-8b82f72dc3a3/products/th-1658953691714.1.jpg"
         },
         {
@@ -40,6 +45,7 @@
             "marca": "Peugeot",
             "modelo": "308",
             "anio": "2019",
+            "descripcion": "El nuevo 308 es un auto que se adapta a tu estilo de vida. Con un diseño moderno y elegante, el 308 es el auto ideal para moverte por la ciudad. Además, cuenta con un motor 1.6L de 120 CV y 150 Nm de torque, que te permitirá disfrutar de un excelente desempeño en la ciudad y en la ruta.",
             "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEv8YXaj-jnEHmdqTodkkFDvCIbDDYkFavgg&usqp=CAU"
         }
     ]

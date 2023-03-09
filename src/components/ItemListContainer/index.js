@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import ItemList from "../ItemList";
-
 function ItemListContainer({ greeting }) {
     const [data, setData] = useState([]);
     console.log("estoy en ItemListContainer");
@@ -18,7 +17,7 @@ function ItemListContainer({ greeting }) {
                 return response.json();
             })
             .then(function (myJson) {
-                setData(myJson)
+                setData(myJson.autos)
             });
     }
     useEffect(() => {
