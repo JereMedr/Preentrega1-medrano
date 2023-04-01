@@ -5,7 +5,6 @@ export default function ItemList({data}) {
         <div>
             <ul>
                 {data.map((item) => (
-                    console.log("estoy en el map "+item),
                     <Item key={item.id} {...item} />   
                 ))}
             </ul>

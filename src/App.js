@@ -1,19 +1,26 @@
 import React from 'react';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
-import ItemDetail from './components/ItemDetail';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ItemDetailContainer from './components/ItemDetailContainer';
+import { BrowserRouter, Routes, Route, useParams} from 'react-router-dom';
+
+
+
+
 function App() {
+
+  console.log("estoy en App");
+  console.log("userParams:", useParams())
+
   return (
     <BrowserRouter>
     <NavBar />
 
     <Routes>
-      <Route
-        path="/"
-        element={<ItemListContainer greeting={"Nuestros autos"} />}
-      />
-      <Route path="/detalle/:id" element={<ItemDetail />} />
+      <Route path="/" element={<ItemListContainer greeting={"Nuestros autos"} />}/>
+  
+      <Route path="/categoria/:id" element={<ItemListContainer greeting={"Nuestros autos"} />}/>
+      <Route path="/detalle/:id" element={<ItemDetailContainer />} />
 
     </Routes>
   </BrowserRouter>

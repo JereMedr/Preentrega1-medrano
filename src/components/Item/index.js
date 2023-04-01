@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
 
-function Item({ modelo, marca, anio,id, descripcion, imagen }) {
+function Item({ modelo, marca, anio,id, imagen }) {
     console.log("estoy en Item");
     let photo = imagen
     return (
