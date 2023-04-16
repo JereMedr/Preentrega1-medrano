@@ -1,0 +1,23 @@
+.red{
+    background-color: red;
+    color: white;
+    border-radius: 1%;
+    padding: 0.5%;
+    margin: 0.5%;
+}
+
+.green{
+    background-color: green;
+    color: white;
+    border-radius: 1%;
+    padding: 0.5%;
+    margin: 0.5%;
+}
+
+.CartBtn{
+    background-color: #f0c14b;
+    color: black;
+    border-radius: 1%;
+    padding: 0.5%;
+    margin: 0.5%;
+}

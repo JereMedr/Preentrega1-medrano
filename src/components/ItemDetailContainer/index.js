@@ -1,6 +1,10 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import ItemDetail from "../ItemDetail";
+//context
+import { useContext } from "react";
+import cartContext from "../../context/cartContext";
 //config firebase--------------------------------------------------------------------------
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, doc, getDoc } from "firebase/firestore";
@@ -42,6 +46,9 @@ function ItemDetailContainer() {
     const params = useParams();
     const idAuto = params.id;
 
+
+    const {addItem } = useContext(cartContext);
+
     useEffect(() => {
         getSingleAutoFromDB(idAuto).then((auto) => {
             setAuto(auto);
@@ -53,7 +60,7 @@ function ItemDetailContainer() {
     return (
         <div>
             <h1>ItemDetailContainer</h1>
-            <h2>{auto.modelo}</h2>
+            <ItemDetail auto={auto} />
         </div>
     );
 }

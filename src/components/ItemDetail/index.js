@@ -1,48 +1,26 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useParams } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useParams } from "react-router-dom";
-import { useState } from "react";
+import ItemCount from "../ItemCount";
+// aca meter el itemDetail y adnetro el itemCount
 
-
-function ItemDetail() {
-    const params = useParams();
-    const autoId = params.id;
-    console.log("autoId:", autoId);
-    // const [auto, setAuto] = useState({});
-
-    function getAutoById(id) {
-        console.log("estoy en getAutoById");
-        fetch('data.json'
-            , {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                }
-            }
-        )
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (myJson) {
-                console.log("myJson:", myJson);
-                console.log("myJson.autos:", myJson.autos);
-                console.log("myJson.autos[0]:", myJson.autos[0]);
-                console.log("myJson.autos[0].id:", myJson.autos[0].id);
-                console.log("myJson.autos[0].modelo:", myJson.autos[0].modelo);
-                console.log("myJson.autos[0].marca:", myJson.autos[0].marca);
-                console.log("myJson.autos[0].anio:", myJson.autos[0].anio);
-                console.log("myJson.autos[0].imagen:", myJson.autos[0].imagen);
-                console.log("myJson.autos[0].descripcion:", myJson.autos[0].descripcion);
-                console.log("myJson.autos[0].precio:", myJson.autos[0].precio);
-            });
-    }
-    getAutoById(autoId);
-
+function ItemDetailContainer({ auto }) {
+    let stock = auto.stock;
     return (
-        <div>
-            <h1>ItemDetail</h1>
+        <>
+            <p>
+                {console.log("estoy en el itemDetailContainer jere Kapo")}
+                {console.log("auto:", auto)}
+            </p>
+            <div className="card-container">
+            <img src={auto.imagen} alt={auto.modelo} className="card-img"></img>
+            <h1>{auto.marca} {auto.modelo}</h1>
+            <h2>{auto.anio}</h2>
+            <h3>unidades disponibles</h3>
+            <h4> {auto.stock}</h4>
+            <ItemCount initial = {1} stock={stock} />
+                {/* <button className="card-button">Ver más</button> */}
         </div>
-    );
+        </>
+    )
 }
-
-export default ItemDetail;
+export default ItemDetailContainer;
