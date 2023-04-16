@@ -1,24 +1,20 @@
 import { useState } from "react";
 import "./styles.css";
 
-function ItemCount (initial, stock)  {
-    console.log(initial, stock)
+function ItemCount({ initial, stock, onAddToCart }) {
     const [counter, setCounter] = useState(0);
     const init = initial;
     const cant = stock;
+
     const add = () => {
-        console.log("counter", counter)
-        console.log("cant", cant)
-        console.log("condition", counter < cant+1)
-        if (counter > cant+1) {
-            setCounter(counter+1);
+        if (counter < cant) {
+            setCounter(counter + 1)
         }
     }
 
     const remove = () => {
-        console.log("condition", counter > init)
-        if (counter < init) {
-            setCounter(counter-1);
+        if (counter > init) {
+            setCounter(counter - 1);
         }
     }
 
@@ -32,7 +28,7 @@ function ItemCount (initial, stock)  {
                 <button className="green" onClick={add}> Agregar </button>
             </div>
             <div >
-                <button className="CartBtn">
+                <button className="CartBtn" onClick={()=>onAddToCart(counter)}>
                     Add carrito
                 </button>
             </div>

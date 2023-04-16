@@ -6,13 +6,25 @@ const cartContext = createContext({
 
 function CartContextProvider(props){
 
-  function addItem(){
-    console.log("addItem");
+  function addItem(auto,counter){
+    console.log("addItem de cartContextProvider");
+    setCart([...cart, {auto,counter}]);
   }
+
+  function removeItem(id){
+    setCart(cart.filter((item) => item.id !== id));
+  }
+
+  function clear(){
+    setCart([]);
+  }
+
 
   const [cart, setCart] = useState([]);
   return (
-    <cartContext.Provider value={{cart:cart}}>{props.children}</cartContext.Provider>
+    <cartContext.Provider value={{cart, addItem, removeItem, clear}}>
+      {props.children}
+    </cartContext.Provider>
   )
 }
 export { CartContextProvider };

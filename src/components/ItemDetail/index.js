@@ -1,10 +1,20 @@
-import React, { useEffect, useState, useParams } from "react";
+import React, { useEffect, useState, useParams,useContext } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ItemCount from "../ItemCount";
-// aca meter el itemDetail y adnetro el itemCount
+//context
+import cartContext from "../../context/cartContext";
+
 
 function ItemDetailContainer({ auto }) {
-    let stock = auto.stock;
+    const { cart, setCart } = useContext(cartContext);
+    const {addItem} = useContext(cartContext);
+
+    function onAddToCart(counter) {
+        console.log("agregado al carrito:", counter, "unidades")
+        addItem(auto, counter);
+    }
+
+
     return (
         <>
             <p>
@@ -17,8 +27,7 @@ function ItemDetailContainer({ auto }) {
             <h2>{auto.anio}</h2>
             <h3>unidades disponibles</h3>
             <h4> {auto.stock}</h4>
-            <ItemCount initial = {1} stock={stock} />
-                {/* <button className="card-button">Ver más</button> */}
+            <ItemCount onAddToCart= {onAddToCart} initial = {1} stock={auto.stock} />
         </div>
         </>
     )
