@@ -12,7 +12,9 @@ function CartContextProvider(props){
   }
 
   function removeItem(id){
-    setCart(cart.filter((item) => item.id !== id));
+    console.log("removeItem de cartContextProvider");
+    console.log("id:", id)
+    setCart(cart.filter((item) => item.auto.id !== id));
   }
 
   function clear(){

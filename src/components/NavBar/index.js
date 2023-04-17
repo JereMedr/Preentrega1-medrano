@@ -17,7 +17,7 @@ function NavBar() {
                 </ul>
             </div>
             <div className="navbar-carrito">
-                <CartWidget/>
+                <Link to="/cart"> <CartWidget /> </Link>
             </div>
         </div>
     );
