@@ -1,15 +1,15 @@
 import React from "react";
 import CartList from "../CartList";
 import CheckoutCart from "../CheckoutCart";
-
+// import bootstrap
+import "bootstrap/dist/css/bootstrap.min.css";
 function CartContainer() {
   return (
-    <>
-    <h1> CartContainer </h1>
+    <div className="container">
     <CartList />
     <hr/>
     <CheckoutCart />
-    </>
+    </div>
   )
   
 }

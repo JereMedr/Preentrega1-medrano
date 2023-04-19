@@ -8,9 +8,6 @@ import CartContainer from './components/CartContainer';
 import CompraFinalizada from './components/CompraFinalizada';
 function App() {
 
-  console.log("estoy en App");
-  console.log("userParams:", useParams())
-
   return (
     <>
       <CartContextProvider>

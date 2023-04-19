@@ -8,7 +8,6 @@ import cartContext  from "../../context/cartContext";
 
 function CartWidget() {
   const { cart } = useContext(cartContext);
-  console.log("cart:", cart);
   const cartCount = cart.length;
     return (
         <a href="#" className="cart-widget">

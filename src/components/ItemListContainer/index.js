@@ -26,22 +26,12 @@ function ItemListContainer({ greeting }) {
     const [data, setData] = useState([]);
     
     async function getDataFromDB() {
-        console.log("estoy en getDataFromDB");
         const autosCollectionRef = collection(db, "autos");
         let snapshotAutos = await getDocs(autosCollectionRef);
         const documents = snapshotAutos.docs;
         const dataAutos = documents.map(doc => ({id:doc.id, ...doc.data()}));
         setData(dataAutos);
     }
-
-    // function getDataFromDB() {
-    //     console.log("estoy en getDataFromDB");
-    //     const querySnapshot = getDocs(collection(db, "autos"));
-    //     querySnapshot.then((querySnapshot) => {
-    //         const docs = querySnapshot.docs.map(doc => doc.data());
-    //         setData(docs);
-    //     });
-    // }
 
     useEffect(() => {
         getDataFromDB()
@@ -50,8 +40,6 @@ function ItemListContainer({ greeting }) {
     return (
         <>
             <h2>{greeting}</h2>
-            {console.log("estoy en return")}
-            {/* {data.map((item) => (console.log("data item:"+item.modelo)))} */}
             <ItemList data={data}/>
         </>
     );

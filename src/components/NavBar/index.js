@@ -10,7 +10,8 @@ function NavBar() {
             <div className="navbar-links">
 
                 <ul>
-                    <li><img src={logo}/></li>
+                    {/* <li><img src={logo}/></li> */}
+                    <li> <Link to='/'> <img src={logo} alt='Logo consecionario'/> </Link></li>
                     <li><Link to='/'>Inicio</Link></li>
                     <li><Link to='#'>Producto</Link></li>
                     <li><Link to='/detalles'>Detalles</Link></li>

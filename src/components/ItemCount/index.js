@@ -20,11 +20,9 @@ function ItemCount({ initial, stock, onAddToCart }) {
 
     return (
         <>
-            <div className="itemcount_control">
+            <div className="count-container">
                 <button className="red" onClick={remove}>Quitar</button>
-
                 <span> {counter} </span>
-
                 <button className="green" onClick={add}> Agregar </button>
             </div>
             <div >

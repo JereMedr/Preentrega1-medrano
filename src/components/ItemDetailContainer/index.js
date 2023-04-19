@@ -1,10 +1,13 @@
 import React from "react";
+
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail";
 //context
 import { useContext } from "react";
 import cartContext from "../../context/cartContext";
+// import bootstrap
+import "bootstrap/dist/css/bootstrap.min.css";
 //config firebase--------------------------------------------------------------------------
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, doc, getDoc } from "firebase/firestore";
@@ -34,7 +37,6 @@ async function getSingleAutoFromDB(idAuto) {
         return { ...docSnapShot.data(), id: docSnapShot.id }
     } else {
         // doc.data() will be undefined in this case
-        console.log("No such document!");
     }
 
 
@@ -58,9 +60,10 @@ function ItemDetailContainer() {
 
 
     return (
-        <div>
-            <h1>ItemDetailContainer</h1>
+        <div className="center-item" >
+            <div>
             <ItemDetail auto={auto} />
+            </div>
         </div>
     );
 }
