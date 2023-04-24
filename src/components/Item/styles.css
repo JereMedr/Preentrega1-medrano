@@ -9,6 +9,7 @@
     border-radius: 0.5rem;
     background-color: #bdccfd;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+    margin: 1%;
 }
 
 .card-container:hover {

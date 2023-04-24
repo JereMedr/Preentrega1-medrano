@@ -14,8 +14,9 @@ function NavBar() {
                     {/* <li><img src={logo}/></li> */}
                     <li> <Link to='/'> <img src={logo} alt='Logo consecionario'/> </Link></li>
                     <li><Link to='/'>Inicio</Link></li>
-                    <li><Link to='#'>Producto</Link></li>
-                    <li><Link to='/detalles'>Detalles</Link></li>
+                    <li><Link to='category/Ford'>Ford</Link></li>
+                    <li><Link to='category/Chevrolet'>Chevrolet</Link></li>
+                    <li><Link to='category/Peugeot'>Peugeot</Link></li>
                 </ul>
             </div>
             <div className="navbar-carrito">

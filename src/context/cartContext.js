@@ -7,7 +7,13 @@ const cartContext = createContext({
 function CartContextProvider(props){
 
   function addItem(auto,counter){
-    setCart([...cart, {auto,counter}]);
+    if(!isInCart(auto.id)){
+      setCart([...cart, {auto,counter}]);
+    }
+  }
+
+  function isInCart(id){
+    return cart.some((item) => item.auto.id === id);
   }
 
   function removeItem(id){

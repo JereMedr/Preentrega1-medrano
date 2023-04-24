@@ -31,3 +31,12 @@ export async function getDataFromDB() {
     const dataAutos = documents.map(doc => ({id:doc.id, ...doc.data()}));
     return dataAutos;
 }
+
+export async function getDataByMarca(marca) {
+    const autosCollectionRef = collection(db, "autos");
+    let snapshotAutos = await getDocs(autosCollectionRef);
+    const documents = snapshotAutos.docs;
+    const dataAutos = documents.map(doc => ({id:doc.id, ...doc.data()}));
+    const dataAutosByMarca = dataAutos.filter(auto => auto.marca === marca);
+    return dataAutosByMarca;
+}

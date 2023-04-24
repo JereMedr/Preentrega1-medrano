@@ -6,6 +6,9 @@ import cartContext from "../../context/cartContext";
 import "bootstrap/dist/css/bootstrap.min.css";
 function CheckoutCart() {
     const { clear } = useContext(cartContext);
+
+
+    
     return (
         <div className="container">
             <h1 className="text-center"> CheckoutCart </h1>
